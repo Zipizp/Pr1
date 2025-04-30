@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Вхід на сайт</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #c3e4ff, #f8fcff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005a9e;
+        }
+
+        .box {
+            text-align: center;
+            padding: 40px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Авторизація</h2>
+        <button onclick="loginProcess()">Увійти</button>
+    </div>
+
+    <script>
+        function loginProcess() {
+            let login = prompt("Введіть логін");
+
+            if (login === "Admin") {
+                let password = prompt("Введіть пароль");
+
+                if (password === "Господар") {
+                    alert("Ласкаво просимо!");
+                } else {
+                    if (password === "" || password === null) {
+                        alert("Скасовано");
+                    } else {
+                        alert("Неправильний пароль");
+                    }
+                }
+
+            } else {
+                if (login === "" || login === null) {
+                    alert("Скасовано");
+                } else {
+                    alert("Я вас не знаю");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
